@@ -41,7 +41,13 @@ class Calculator {
 
 function capitalize(string) {
     let capitalized = ''
-for(let i = 0; i < string.length; i++) {
+    let regex = /[$0-9]/
+    if (regex.test(string)) {
+        return 'not a string'
+    }
+    else {
+        for(let i = 0; i < string.length; i++) {
+    
     if(i === 0) {
         capitalized += string[i].toUpperCase()
     }
@@ -49,6 +55,7 @@ for(let i = 0; i < string.length; i++) {
         capitalized += string[i]
     }
 }
+    }
 return capitalized
 }
 

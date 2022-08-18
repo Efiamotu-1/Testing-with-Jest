@@ -83,5 +83,5 @@ describe('Multiply numbers', () => {
 
 
 test('capitalise the first character of the string', () => {
-    expect(capitalize('buhari has been a bad boy')).toBe('Buhari has been a bad boy')
+    expect(capitalize(1)).toBe('not a string')
 })
